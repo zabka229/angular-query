@@ -3,5 +3,37 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "angular-query": {
+      "projectType": "library",
+      "root": "projects/angular-query",
+      "sourceRoot": "projects/angular-query/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/angular-query/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/angular-query/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/angular-query/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/angular-query/src/test.ts",
+            "tsConfig": "projects/angular-query/tsconfig.spec.json",
+            "karmaConfig": "projects/angular-query/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "angular-query"
 }
