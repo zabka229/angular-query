@@ -1,5 +1,5 @@
 {
-  "name": "@zaba/angular-query",
+  "name": "@zabka229/angular-query",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": ">= 8.2.14 < 13",
